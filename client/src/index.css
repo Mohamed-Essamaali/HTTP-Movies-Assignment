@@ -75,3 +75,12 @@ body {
   color: red;
   text-align: center;
 }
+
+.update-button {
+  position: absolute;
+  top: 90px;
+  right: 25px;
+  border: 1px solid grey;
+  padding: 1% 2%;
+  background-color: rgb(187, 180, 140);
+}
