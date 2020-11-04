@@ -1,8 +1,28 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Link } from "react-router-dom";
 import MovieCard from "./MovieCard";
+import axios from 'axios'
 
-function MovieList({ movies }) {
+
+function MovieList({ movies,setMovieList }) {
+
+  // const fetchMovie = () => {
+  //   axios
+  //     .get(`http://localhost:5000/api/movies/`)
+
+  //     .then((res) => {
+  //       setMovieList(res.data);
+  //       console.log('data to updated in list ',res.data)
+  //     })
+  //     .catch((err) => console.log(err.response));
+  // };
+
+ 
+
+  // useEffect(() => {
+  //   fetchMovie();
+  // }, []);
+
   return (
     <div className="movie-list">
       {

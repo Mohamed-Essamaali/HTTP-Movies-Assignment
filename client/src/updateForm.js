@@ -35,7 +35,7 @@ const UpdateForm =(props)=>{
     }
     
 
-    // console.log('active card', activeCard)
+    console.log('props.movieList after update ',props.movieList)
 
     const handleChange = e=>{
     
@@ -48,10 +48,11 @@ const UpdateForm =(props)=>{
         axios
         .put(`http://localhost:5000/api/movies/${id}`,movie)
         .then(res=>{
-            props.setMovieList(...props.movieList,res.data);
-            history.push(`/movies/${id}`)
+            props.setMovieList([...props.movieList,res.data]);
+            history.push(`/`)
 
-            console.log(res)
+            console.log('res after update ',res.data)
+           
         })
         .catch(err=>{
             console.log(err)
@@ -61,7 +62,7 @@ const UpdateForm =(props)=>{
     return(
         <div className='update-form'>
             <h1> Update movie information</h1>
-            <form onSubmit={handleSubmit}>
+            <form >
                 <input
                 type='text'
                 name='title'
@@ -86,7 +87,8 @@ const UpdateForm =(props)=>{
                 value={movie.stars}
                 onChange = {handleChange}
                 />
-                <button>Update</button>
+                <button onClick={handleSubmit}>Update</button>
+                
             </form>
         </div>
     )

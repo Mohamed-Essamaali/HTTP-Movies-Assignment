@@ -2,7 +2,7 @@ import React from 'react';
 import {Link,useHistory} from 'react-router-dom'
 
 const MovieCard = props => {
-  console.log('props in card ',props)
+
 
   let {push} = useHistory();
   const { title, director, metascore, stars } = props.movie;

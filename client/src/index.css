@@ -84,3 +84,11 @@ body {
   padding: 1% 2%;
   background-color: rgb(187, 180, 140);
 }
+.delete-button {
+  position: absolute;
+  top: 150px;
+  right: 25px;
+  border: 1px solid grey;
+  padding: 1% 2%;
+  background-color: rgb(233, 42, 36);
+}
