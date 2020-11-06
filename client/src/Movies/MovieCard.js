@@ -1,10 +1,10 @@
 import React from 'react';
-import {Link,useHistory} from 'react-router-dom'
+
 
 const MovieCard = props => {
 
 
-  let {push} = useHistory();
+
   const { title, director, metascore, stars } = props.movie;
   return (
     <div className="movie-card">

@@ -23,14 +23,15 @@ console.log('params',params)
 
   useEffect(() => {
     fetchMovie(params.id);
-  }, [params.id]);
+  }, []);
 
+  //delete card
   const deleteCard = ()=>{
     axios
     .delete(`http://localhost:5000/api/movies/${params.id}`)
     .then(res=>{
-      // setMovie(res.data)
-      console.log('res.data when delete in movie',movieList)
+      setMovie(res.data)
+     
     
     })
     .catch(err=>console.log(err))

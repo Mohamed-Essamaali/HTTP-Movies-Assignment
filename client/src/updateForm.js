@@ -16,6 +16,7 @@ const UpdateForm =(props)=>{
     let {id} = useParams();
     let history = useHistory();
     const[movie,setMovie] = useState(initialState)
+    
     useEffect(()=>{
         getItem()
 
@@ -30,12 +31,12 @@ const UpdateForm =(props)=>{
             console.log('movie in update form axios get call ',res.data)
         })
         .catch(err=>{
-            console.log()
+            console.log(err)
         })
     }
     
 
-    console.log('props.movieList after update ',props.movieList)
+   
 
     const handleChange = e=>{
     
